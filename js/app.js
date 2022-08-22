@@ -24,7 +24,7 @@ function buildTable(data) {
 //New function to create a filter button
 function handleClick() {
     //Grab the datetime value from the filter
-    let date=d3.select("#datetime").property.("value");
+    let date=d3.select("#datetime").property("value");
     let filteredData= tableData;
 
     //Check to see if a date was entered and filter teh data using that date
@@ -39,7 +39,7 @@ function handleClick() {
 };
 
 //attach an event to listen for the form button
-d3.selectAll("#filter-btn').on("click", handleClick);
+d3.selectAll("#filter-btn").on("click", handleClick);
 
 //Build the table when the page loads
 buildTable(tableData);
