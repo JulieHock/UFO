@@ -23,23 +23,6 @@ function buildTable(data) {
   });
 }
 
-// //New function to create a filter button
-// function handleClick() {
-//   //Grab the datetime value from the filter
-//   let date=d3.select("#datetime").property("value");
-//   let filteredData= tableData;
-
-//   //Check to see if a date was entered and filter the data using that date
-//   if (date) {
-//       //Apply 'filter' to the table data to only eep the rows where the 'datetime' value matches the filter value
-//       filteredData=filteredData.filter(row => row.datetime === date);
-//   };
-
-//   //Rebuild the table using the filtered data
-//   //@Note: if no date was entered, then filteredData will just be the original tableData
-//   buildTable(filteredData);
-// };
-
 // 1. Create a variable to keep track of all the filters as an object.
 var filters={};
 
@@ -59,9 +42,9 @@ function updateFilters() {
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
     if (elementValue) {
-      filters[filterID]=elementValue
+      filters[filterId]=elementValue
     } else {
-      delete filters[filterID];
+      delete filters[filterId];
     }
  
   
